@@ -1,0 +1,40 @@
+
+    {
+        "utilisateurs": [
+          {
+            "id": 1,
+            "nom": "Dupont",
+            "prenom": "Jean",
+            "email": "jean.dupont@example.com",
+            "amis": [2, 3]
+          },
+          {
+            "id": 2,
+            "nom": "Martin",
+            "prenom": "Pierre",
+            "email": "pierre.martin@example.com",
+            "amis": [1]
+          },
+          {
+            "id": 3,
+            "nom": "Leroy",
+            "prenom": "Julie",
+            "email": "julie.leroy@example.com",
+            "amis": [1]
+          }
+        ],
+        "publications": [
+          {
+            "id": 1,
+            "utilisateurId": 1,
+            "texte": "Bonjour tout le monde !",
+            "date": "2024-03-02T08:32:45Z"
+          },
+          {
+            "id": 2,
+            "utilisateurId": 2,
+            "texte": "C'est une belle journée aujourd'hui !",
+            "date": "2024-03-02T09:00:00Z"
+          }
+        ]
+      }
