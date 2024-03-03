@@ -5,13 +5,13 @@ import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
-import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { Link } from "@mui/material";
 
 function Copyright(props) {
   return (
@@ -22,16 +22,11 @@ function Copyright(props) {
       {...props}
     >
       {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{" "}
-      {new Date().getFullYear()}
+      <Link color="inherit" href="#"></Link> {new Date().getFullYear()}
       {"."}
     </Typography>
   );
 }
-
-// TODO remove, this demo shouldn't need to reset the theme.
 
 const defaultTheme = createTheme();
 
@@ -72,12 +67,12 @@ export default function SignUp() {
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
-                  autoComplete="given-name"
-                  name="firstName"
+                  autoComplete="Votre nom"
+                  name="nom"
                   required
                   fullWidth
-                  id="firstName"
-                  label="First Name"
+                  id="nom"
+                  label="Nom"
                   autoFocus
                 />
               </Grid>
@@ -85,10 +80,10 @@ export default function SignUp() {
                 <TextField
                   required
                   fullWidth
-                  id="lastName"
-                  label="Last Name"
+                  id="prenom"
+                  label="Prenom"
                   name="lastName"
-                  autoComplete="family-name"
+                  autoComplete="Nom de la famille"
                 />
               </Grid>
               <Grid item xs={12}>
@@ -96,7 +91,7 @@ export default function SignUp() {
                   required
                   fullWidth
                   id="email"
-                  label="Email Address"
+                  label="Address email"
                   name="email"
                   autoComplete="email"
                 />
@@ -117,7 +112,7 @@ export default function SignUp() {
                   control={
                     <Checkbox value="allowExtraEmails" color="primary" />
                   }
-                  label="I want to receive inspiration, marketing promotions and updates via email."
+                  label="J'accepte tout condition d'utilisation et j'ai lue le contract"
                 />
               </Grid>
             </Grid>
@@ -127,12 +122,12 @@ export default function SignUp() {
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              Sign Up
+              Inscription
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="#" variant="body2">
-                  Already have an account? Sign in
+                <Link variant="body2">
+                  Si vous-avez déja un compte ? Connectez-vous
                 </Link>
               </Grid>
             </Grid>
