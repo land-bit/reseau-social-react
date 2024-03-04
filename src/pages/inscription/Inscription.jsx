@@ -11,7 +11,7 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { Link } from "@mui/material";
+import { Link } from "react-router-dom";
 
 function Copyright(props) {
   return (
@@ -22,7 +22,7 @@ function Copyright(props) {
       {...props}
     >
       {"Copyright © "}
-      <Link color="inherit" href="#"></Link> {new Date().getFullYear()}
+      {new Date().getFullYear()}
       {"."}
     </Typography>
   );
@@ -30,7 +30,7 @@ function Copyright(props) {
 
 const defaultTheme = createTheme();
 
-export default function SignUp() {
+export default function Inscription() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -126,7 +126,7 @@ export default function SignUp() {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link variant="body2">
+                <Link to="/connexion">
                   Si vous-avez déja un compte ? Connectez-vous
                 </Link>
               </Grid>
