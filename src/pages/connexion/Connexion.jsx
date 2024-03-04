@@ -57,7 +57,7 @@ export default function Connexion() {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Sign in
+            Connexion
           </Typography>
           <Box
             component="form"
@@ -70,7 +70,7 @@ export default function Connexion() {
               required
               fullWidth
               id="email"
-              label="Email Address"
+              label="Address Email"
               name="email"
               autoComplete="email"
               autoFocus
@@ -80,14 +80,19 @@ export default function Connexion() {
               required
               fullWidth
               name="password"
-              label="Password"
+              label="Mot de passe"
               type="password"
               id="password"
               autoComplete="current-password"
             />
+            <Grid item xs>
+              <Link href="#" variant="body2">
+                vous avez oublier votre mot de passe ?
+              </Link>
+            </Grid>
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
+              label="Enregistrer votre mot de passe"
             />
             <Button
               type="submit"
@@ -95,17 +100,12 @@ export default function Connexion() {
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              Sign In
+              Connexion
             </Button>
             <Grid container>
-              <Grid item xs>
-                <Link href="#" variant="body2">
-                  Forgot password?
-                </Link>
-              </Grid>
               <Grid item>
                 <Link href="#" variant="body2">
-                  {"Don't have an account? Sign Up"}
+                  {"Si vous n'avez pas de compte ? Inscription"}
                 </Link>
               </Grid>
             </Grid>
